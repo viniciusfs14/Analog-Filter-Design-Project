@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1353</width>
+    <height>777</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget{
+background-color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>570</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>570</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="2" column="0" rowspan="2">
+        <widget class="QWidget" name="content" native="true">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="2" column="5" alignment="Qt::AlignRight">
+           <widget class="QLineEdit" name="amax_line">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QLabel" name="label_9">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selecione a topológia do filtro:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="5" alignment="Qt::AlignRight">
+           <widget class="QLineEdit" name="amin_line">
+            <property name="text">
+             <string>40</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="5" alignment="Qt::AlignRight">
+           <widget class="QLineEdit" name="fs_line">
+            <property name="text">
+             <string>10000</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="5" alignment="Qt::AlignRight">
+           <widget class="QLineEdit" name="fp_line">
+            <property name="text">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="5" alignment="Qt::AlignRight">
+           <widget class="QCheckBox" name="cheby_button">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Chebyshev</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">filters</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="1" alignment="Qt::AlignLeft">
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Amin:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="2" alignment="Qt::AlignRight">
+           <widget class="QCheckBox" name="sallenkey_button">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Sallen-Key</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">topology</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="9" column="5" alignment="Qt::AlignRight">
+           <widget class="QCheckBox" name="mfb_button">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>MFB</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">topology</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="1" alignment="Qt::AlignLeft">
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Amax:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" alignment="Qt::AlignLeft">
+           <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Fs:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLabel" name="label_6">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Selecione o tipo de filtro: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2" alignment="Qt::AlignRight">
+           <widget class="QCheckBox" name="buteerworth_button">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Butterworth</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">filters</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="4" column="1" alignment="Qt::AlignLeft">
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Fp:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLabel" name="label_13">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Ganho:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="5" alignment="Qt::AlignRight">
+           <widget class="QLineEdit" name="K_line">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QWidget" name="bottom_2" native="true">
+         <layout class="QGridLayout" name="gridLayout_17">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="projetar_button">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+    background-color: #000040; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    border-radius: 8px; /* Cantos arredondados */
+    outline: none; /* Remover borda de foco */
+    /* Infelizmente, `box-shadow` e `transform` não são suportados em QSS */
+}
+
+QPushButton:hover {
+    background-color: #1a1aff; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+QPushButton:pressed {
+    background-color: #0000a0; /* Cor de fundo ao clicar */
+    padding: 11px 21px; /* Simula o movimento ao pressionar */
+}</string>
+            </property>
+            <property name="text">
+             <string>Projetar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="clean_button">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+    background-color: #000040; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    border-radius: 8px; /* Cantos arredondados */
+    outline: none; /* Remover borda de foco */
+    /* Infelizmente, `box-shadow` e `transform` não são suportados em QSS */
+}
+
+QPushButton:hover {
+    background-color: #1a1aff; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+QPushButton:pressed {
+    background-color: #0000a0; /* Cor de fundo ao clicar */
+    padding: 11px 21px; /* Simula o movimento ao pressionar */
+}</string>
+            </property>
+            <property name="text">
+             <string>Limpar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignBottom">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Desenvolvido por Vinícius Fernandes Silvestre</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QWidget" name="header" native="true">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="5" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_7">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Insira abaixo os parâmetros para a projeção do filtro</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="ui/images/fonte.qrc">:/newPrefix/logo.png</pixmap>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="titulo">
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Projeto de Filtros Analógicos</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="Polos_page">
+          <attribute name="title">
+           <string>Polos</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="0">
+            <widget class="QWidget" name="graf_polos" native="true">
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="label_polos">
+                <property name="text">
+                 <string>.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="T_s_page">
+          <attribute name="title">
+           <string>T(s)</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="0" column="0">
+            <widget class="QWidget" name="ts_widget" native="true">
+             <layout class="QGridLayout" name="gridLayout_14">
+              <item row="0" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="ts_label">
+                <property name="text">
+                 <string>.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="Bode_page">
+          <attribute name="title">
+           <string>Bode</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="0" column="0">
+            <widget class="QWidget" name="graf_bode" native="true">
+             <layout class="QGridLayout" name="gridLayout_16">
+              <item row="0" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="bode_label">
+                <property name="text">
+                 <string>.</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="SallenKey_page">
+          <attribute name="title">
+           <string>Sallen-Key</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget_3" native="true">
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="1" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="ui/images/fonte.qrc">:/newPrefix/sallen2.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignTop">
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <pointsize>15</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Circuito Sallen-Key</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QTableWidget" name="table_components">
+                <property name="minimumSize">
+                 <size>
+                  <width>520</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QTableWidget, QTableView {
+    background-color: white; /* Cor de fundo da tabela */
+    gridline-color: black; /* Cor das linhas da grade */
+    border: 1px solid #dcdcdc; /* Borda ao redor da tabela */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    selection-background-color: #1a73e8; /* Cor de fundo ao selecionar */
+    selection-color: white; /* Cor do texto ao selecionar */
+}
+
+QHeaderView::section {
+    background-color: #000040; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 5px; /* Espaçamento interno */
+    border: 1px solid #dcdcdc; /* Borda ao redor das células do cabeçalho */
+    font-weight: bold; /* Negrito para o texto do cabeçalho */
+}
+
+QTableCornerButton::section {
+    background-color: #000040; /* Cor do canto superior esquerdo da tabela */
+    border: 1px solid #dcdcdc; /* Borda ao redor do canto */
+}
+
+QTableWidget::item {
+    padding: 8px; /* Espaçamento interno das células */
+}
+
+
+</string>
+                </property>
+                <row>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string>Bloco</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>R1</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>R2</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>C1</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>C2</string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="MFB_page">
+          <attribute name="title">
+           <string>MFB</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget_4" native="true">
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="label_12">
+                <property name="font">
+                 <font>
+                  <pointsize>15</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Circuito MFB</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="ui/images/fonte.qrc">:/newPrefix/mfb.png</pixmap>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" alignment="Qt::AlignHCenter">
+               <widget class="QTableWidget" name="table_components2">
+                <property name="minimumSize">
+                 <size>
+                  <width>610</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QTableWidget, QTableView {
+    background-color: white; /* Cor de fundo da tabela */
+    gridline-color: black; /* Cor das linhas da grade */
+    border: 1px solid #dcdcdc; /* Borda ao redor da tabela */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    selection-background-color: #1a73e8; /* Cor de fundo ao selecionar */
+    selection-color: white; /* Cor do texto ao selecionar */
+}
+
+QHeaderView::section {
+    background-color: #000040; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 5px; /* Espaçamento interno */
+    border: 1px solid #dcdcdc; /* Borda ao redor das células do cabeçalho */
+    font-weight: bold; /* Negrito para o texto do cabeçalho */
+}
+
+QTableCornerButton::section {
+    background-color: #000040; /* Cor do canto superior esquerdo da tabela */
+    border: 1px solid #dcdcdc; /* Borda ao redor do canto */
+}
+
+QTableWidget::item {
+    padding: 8px; /* Espaçamento interno das células */
+}
+
+
+</string>
+                </property>
+                <row>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string>Bloco</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>R1</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>R2</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>R3</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>C1</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>C2</string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="ui/images/fonte.qrc"/>
+ </resources>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="filters"/>
+  <buttongroup name="topology"/>
+ </buttongroups>
+</ui>
